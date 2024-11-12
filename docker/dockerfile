@@ -1,0 +1,23 @@
+# docker build -t keti/mmc2_model:v0.58 .
+# docker run --gpus=all -p 5000:5000 --rm -it --name mmc2_model keti/mmc2_model:v0.58
+# docker tag keti/mmc2_model:v0.58 ketiair.com:10004/mmc2_model:v0.58
+# docker push ketiair.com:10004/mmc2_model:v0.58
+# docker pull ketiair.com:10004/mmc2_model:v0.58
+# docker run --gpus=all -p 5000:5000 --rm -it --name mmc2_model ketiair.com:10004/mmc2_model:v0.58
+# docker run --gpus=all -p 5001:5000 -d -it --restart always --name mmc2_model2 ketiair.com:10004/mmc2_model:v0.58
+
+
+FROM keti/llama_cpp-cuda12.1:v0.2.90
+LABEL maintainer="KETI AIRC sankim <kimsan0622@keti.re.kr>"
+
+COPY ./requirements.txt /root/requirements.txt
+RUN pip install -r /root/requirements.txt
+
+COPY ./app /app
+WORKDIR /app
+
+
+CMD ["gunicorn", "--workers=3", "--bind=0.0.0.0:5000", "--timeout=0", "app:app"]
+# CMD ["python", "-m", "flask", "run", "--host=0.0.0.0"]
+
+EXPOSE 5000
