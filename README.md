@@ -14,6 +14,9 @@ docker build -t keti/llama_cpp-cuda12.1:v0.2.90 .
 
 2. 모델 파일을 다운로드 받아 `docker/app/model` 아래로 복사한다.
 
+| model name | URL |
+| --- | --- |
+| v0.59 | [Link](https://drive.google.com/file/d/1JPqgKAiMRapJpaV3exAEZPRWW757YvwY/view?usp=drive_link) |
 
 3. 어플리케이션 docker image를 빌드한다.
 
