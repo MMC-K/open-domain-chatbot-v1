@@ -19,6 +19,8 @@ docker build -t keti/llama_cpp-cuda12.1:v0.2.90 .
 | v0.59 | [Link](https://drive.google.com/file/d/1JPqgKAiMRapJpaV3exAEZPRWW757YvwY/view?usp=drive_link) |
 | v0.58 | [Link](https://drive.google.com/file/d/1CUC1orqFIMxAwTIuiOnoQWLkFRbYkjEx/view?usp=sharing) |
 | v0.56 | [Link](https://drive.google.com/file/d/1IGGzWhWjlZWKCBgwJ0yry_Wjwfr7CEgk/view?usp=sharing) |
+| v0.51 | [Link](https://drive.google.com/file/d/1zaD491PwfujjjIrct_UDioL9xldEKg33/view?usp=sharing) |
+
 
 3. 어플리케이션 docker image를 빌드한다.
 
