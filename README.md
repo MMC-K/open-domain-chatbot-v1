@@ -1,5 +1,8 @@
 # 오픈 도메인 사용자 경험 기반 대화 모델 V.1 (SW)
 
+## 모델 설명
+- 일상 대화와 QA, Tool calling 기능을 갖춘 **오픈 도메인 사용자 경험 기반 대화 모델 V.1 (SW)
+
 ## 모델 빌드 방법 및 사용법
 
 1. 기본 docker image를 빌드한다.
@@ -60,5 +63,10 @@ python test.py
  'object': 'chat.completion',
  'usage': {'completion_tokens': 36, 'prompt_tokens': 491, 'total_tokens': 527}}
 ```
+
+
+## Acknowledgement
+--
+본 연구는 정부(과학기술정보통신부)의 재원으로 지원을 받아 수행된 연구입니다. (No. RS-2022-II220320, 상황인지 및 사용자 이해를 통한 인공지능 기반 1:1 복합대화 기술 개발)
 
 
